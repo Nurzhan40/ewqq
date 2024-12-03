@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images with Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <style>
+      @keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+#image-container1, #image-container2, #image-container3, 
+        body {
+            font-family: 'Zilla Slab', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #a1a1a1b9;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        p {
+            text-align: center;
+            margin: 0 1rem 1rem;
+        }
+
+        .image-container {
+            position: relative;
+            width: 30%;
+            margin: 10px auto;
+        }
+
+        img {
+            width: 100%; 
+            height: auto; 
+            display: block;
+        }
+
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text {
+                font-size: 14px;
+            }
+        }
+
+        .image-text1 {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 9px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text1 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text2 {
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 9px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text2 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text3 {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 9px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text3 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text4 {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 9px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text4 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text5 {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.788);
+            font-size: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(158, 158, 158, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text5 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text6 {
+            position: absolute;
+            top: 210%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 9px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text6 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text7 {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 2px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            img {
+  border-radius: 100%;
+}
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text7 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text8 {
+            position: absolute;
+            top: 45%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text8 {
+                font-size: 14px;
+            }
+        }
+
+        .image-text9 {
+            position: absolute;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.788);
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 90%;
+            }
+
+            .image-text9 {
+                font-size: 14px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <link href="css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+    <div class="image-container">
+        <a><img src="70adc790-f6af-4f31-ab9e-3558d9483626.jfif" alt="Image 1"></a>
+        <div class="image-text"><h1>COMPANY</h1><P><A HREF="#G1"><H3>PRESENTATION</H3></A></div>
+    </div>
+    <div class="image-container">
+    <a><img src="mkj.png" alt="Image 2"></a>
+        <div class="image-text1"><H1>ABOUT US</H1><br> Our company<br> <i>Lorem ipsum dolor elit. <br>Earum dolores iste inventore, <br>iusto officiis ratione quis <br>laudantium incidunt culpa. <br>In temporibus quos fugiat,nobis?</i></div>
+    </div>
+    <div class="image-container">
+    <a><img src="kjyiuyug.png" alt="Image 3"></a>
+        <div class="image-text2">STORY <BR>Lorem ipsum dolor sit amet consectetur adipisicing  iusto beatae! Eveniet exercitationem quibusdam error. Veniam nobis iusto amet qui excepturi?</div>
+    </div>
+    <div class="image-container">
+    <a><img src="kokjk.png" alt="Image 4"></a>
+        <div class="image-text3">PROJECT <p><p> Lorem ipsum dolor sit<br> amet consectetur adipisicing elit.<br> sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="image-container">
+    <a><img src="wnerdf.png" alt="Image 5"></a>
+        <div class="image-text4">SOCIAL <BR> MEDIA </div>
+    </div>
+    <div class="image-container">
+    <a><img src="5e847a2d-52fd-4067-bb6c-69d8b6ac4091 (1).jfif" alt="Image 6"></a>
+        <div class="image-text5"><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3
+            <BR>
+                <BR>
+                    GDSJHDJ<BR>KSGDFJL<BR>KSLDKJ
+        </h1></div>
+    </div>
+
+    
+    <div class="image-container">
+    <a><img src="70adc790-f6af-4f31-ab9e-3558d9483626.jfif" alt="Image 7"></a>
+        <div class="image-text7"><img src="Без названия (2).jfif" alt="Paris" width="150" height="100"></div>
+    </div>
+    <div class="image-container">
+    <a><img src="fjkdfk.png" alt="Image 8"></a>
+        <div class="image-text8">CONTACT</div>
+    </div>
+    <div class="image-container">
+    <a><img src="2wes.png" alt="Image 9">
+        <div class="image-text9"><P ID="G1">T H A N K </P><P> Y O U</div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myVideo {
+width: 100%; 
+max-width: 800px;
+margin: 0 auto; 
+display: block;
+border: 5px solid #ccc;
+border-radius: 40px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+#myVideo {
+animation: fadeIn 2s ease-in-out; 
+}
+#myVideo {
+transition: transform 0.5s ease, box-shadow 0.5s ease; 
+}
+#myVideo:hover {
+transform: scale(1.1); 
+box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);
+}
+
+@keyframes novevideo {
+    0% {
+        transform: translate(100%);
+    }
+        100% {
+        transform: translateX(0);
+        }
+    }
+
+#myVideo {
+    animation: moveVideo is ease-out;
+}
+</style>
+<body>
+    <video id="myVideo" controls>
+        <source src="c:\Users\user\Desktop\istockphoto-1170947236-640_adpp_is.mp4" type="video/mp4">
+        видео
+        </video>
+</body>
+</html>
